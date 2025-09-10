@@ -1,0 +1,178 @@
+/* ================================
+   Variables
+=================================== */
+:root {
+  --font-family: Arial, sans-serif;
+  --color-bg: #f9f9f9;
+  --color-text: #333;
+  --color-primary: #4e6ef2;
+  --color-dark: #222;
+  --color-light: #fff;
+  --max-width: 900px;
+}
+
+/* ================================
+   Base Styles
+=================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-light);
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* ================================
+   Header
+=================================== */
+header {
+  background: var(--color-primary);
+  color: var(--color-light);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: var(--color-light);
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--color-bg);
+}
+
+/* ================================
+   Main Content
+=================================== */
+main {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* ================================
+   Projects
+=================================== */
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.project-card {
+  background: var(--color-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* ================================
+   Footer
+=================================== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+
+/* ================================
+   Responsive Layout
+=================================== */
+@media (min-width: 600px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .project-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* ================================
+   About Section
+=================================== */
+#about img {
+  width: 150px;        /* fixed small size */
+  height: auto;        /* keep proportions */
+  display: block;      /* allow centering */
+  margin: 1rem auto;   /* center horizontally */
+  border-radius: 50%;  /* optional: make it circular */
+}
+
